@@ -132,6 +132,68 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="max-w-screen-xl mx-auto mt-24">
+        <div className="p-12 bg-gray-100 rounded-md grid grid-cols-2">
+          <div>
+            <h1 className="to-blue-950 text-4xl font-black mb-6">
+              Ready to help?
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+              similique aspernatur iure consequatur dolore omnis distinctio
+              ullam.
+            </p>
+            <div className="mt-8 flex gap-4">
+              <Button
+                className="text-white font-bold"
+                variant={"brand"}
+                size={"lg"}
+              >
+                DONATE NOW
+              </Button>
+              <Button
+                className="font-bold"
+                variant={"brand-outline"}
+                size={"lg"}
+              >
+                BE VOLUNTEER
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="mt-24">
+        <div className="max-w-screen-xl gap-4 p-6 md:p-12 mx-auto grid grid-cols-2 md:grid-cols-3">
+          <div className="max-md:col-span-2">
+            <h1 className="text-cyan-700 font-bold text-2xl mb-2">
+              Begum Inayat
+            </h1>
+            <p>A open source organization for orphan adoption</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="max-md:mr-auto">
+              <h1 className="text-xl font-bold text-blue-950 mb-2">Call Us</h1>
+              <p className="mb-1 text-gray-500">+923116287**7</p>
+              <p className="mb-1 text-gray-500">+923116287**7</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="max-md:mr-auto">
+              <h1 className="text-xl font-bold text-blue-950 mb-2">
+                Contact Us
+              </h1>
+              <p className="mb-1 text-gray-500">org.info@gmail.com</p>
+              <p className="mb-1 text-gray-500">see location on map</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 max-w-screen-xl mx-auto border-t border-gray-200 py-4 flex">
+          <p className="ml-auto text-gray-500">&copy; copyright 2024</p>
+        </div>
+      </footer>
     </>
   );
 }
