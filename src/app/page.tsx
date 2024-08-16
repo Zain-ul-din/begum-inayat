@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-24 md:mt-32 bg-light-green p-12">
+      <section className="mt-24 md:mt-32 bg-light-green p-6 md:p-12">
         <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-6 md:p-12">
           <div>
             <img
