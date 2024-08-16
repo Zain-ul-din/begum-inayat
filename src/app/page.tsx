@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* cards */}
       <div
-        className="max-w-[1200px] grid  mx-auto p-2 gap-2  -translate-y-10  overflow-x-auto"
+        className="max-w-[1200px] grid  mx-auto p-2 gap-2  -translate-y-10  snap-x snap-mandatory overflow-x-auto"
         style={{
           gridTemplateColumns: "repeat(3, minmax(250px, 1fr))"
         }}
@@ -60,7 +60,7 @@ export default function Home() {
             <div
               key={i}
               className={cn(
-                "w-full bg-blue-900 text-white p-4 md:p-8 rounded-md ",
+                "w-full bg-blue-900 text-white p-4 md:p-8 rounded-md snap-center",
                 i === 0 && "bg-gradient-to-b from-pink-500 to-pink-600",
                 i === 1 && "bg-gradient-to-b from-blue-800 to-blue-900",
                 i === 2 && "bg-gradient-to-b from-cyan-500 to-cyan-600"
