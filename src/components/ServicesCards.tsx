@@ -11,8 +11,6 @@ export default function ServicesCards() {
 
   const isMdDevice = useMediaQuery("(max-width: 800px");
 
-  console.log("isMd Device:", isMdDevice);
-
   useLayoutEffect(() => {
     if (!isMdDevice) return;
     gsap.registerPlugin(ScrollTrigger);
@@ -20,10 +18,9 @@ export default function ServicesCards() {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: "main",
-        start: "top+=210px",
+        start: "top+=300px",
         end: "bottom-=100px",
         scrub: true,
-        markers: true,
         pin: true
       },
       onUpdate: function () {
