@@ -16,8 +16,7 @@ export default function ServicesCards() {
         trigger: servicesCardsRef.current,
         start: "top-=250px",
         end: "top-=100px",
-        scrub: 1,
-        markers: true
+        scrub: 1
       },
       onUpdate: function () {
         setScrollProgress(this.totalProgress());
