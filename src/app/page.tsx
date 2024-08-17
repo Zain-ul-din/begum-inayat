@@ -1,3 +1,4 @@
+import ServicesCards from "@/components/ServicesCards";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +14,8 @@ export default function Home() {
       {/* hero section */}
       <main className=" text-white p-4 min-h-[80vh] h-[80vh] flex flex-col relative">
         <img
+          data-scroll
+          data-scroll-speed="-0.1"
           src="/images/children.png"
           alt="orphan children picture"
           width={"100%"}
@@ -45,46 +48,7 @@ export default function Home() {
       </main>
 
       {/* cards */}
-      <div
-        className="max-w-[1200px] grid  mx-auto p-2 gap-2  -translate-y-10  snap-x snap-mandatory overflow-x-auto"
-        style={{
-          gridTemplateColumns: "repeat(3, minmax(250px, 1fr))"
-        }}
-      >
-        {[
-          "/images/children.svg",
-          "/images/graduation-cap.svg",
-          "/images/love.svg"
-        ].map((imgSrc, i) => {
-          return (
-            <div
-              key={i}
-              className={cn(
-                "w-full bg-blue-900 text-white p-4 md:p-8 rounded-md snap-center",
-                i === 0 && "bg-gradient-to-b from-pink-500 to-pink-600",
-                i === 1 && "bg-gradient-to-b from-blue-800 to-blue-900",
-                i === 2 && "bg-gradient-to-b from-cyan-500 to-cyan-600"
-              )}
-            >
-              <img src={imgSrc} alt="kids icon" width={"60"} height={"60"} />
-              <h1 className="font-bold text-2xl my-4">
-                {i === 0
-                  ? "Empowering Education"
-                  : i === 1
-                  ? "Health and Well-being"
-                  : "Emotional Support"}
-              </h1>
-              <p className="text-sm mb-2">
-                {i === 0
-                  ? "Your generosity ensures that every child under our care has access to quality education. By unlocking the doors to learning, we break the cycle of poverty and open up a world of opportunities for these children."
-                  : i === 1
-                  ? "With your help, we provide essential healthcare services and nutritious meals, creating a safe and nurturing environment where children can thrive both physically and mentally."
-                  : "Your donation enables us to offer counseling services and emotional support, helping children heal from trauma and build resilience."}
-              </p>
-            </div>
-          );
-        })}
-      </div>
+      <ServicesCards />
 
       <section className="max-w-screen-xl mx-auto p-4 mt-12 md:mt-24">
         <div className="bg-gray-100 relative p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-4">
