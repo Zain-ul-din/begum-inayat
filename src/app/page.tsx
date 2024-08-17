@@ -1,3 +1,4 @@
+import Hero from "@/components/hero";
 import ServicesCards from "@/components/ServicesCards";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -12,43 +13,12 @@ export default function Home() {
       </header> */}
 
       {/* hero section */}
-      <main className=" text-white p-4 min-h-[80vh] h-[80vh] flex flex-col relative">
-        <img
-          data-scroll
-          data-scroll-speed="-0.1"
-          src="/images/children.png"
-          alt="orphan children picture"
-          width={"100%"}
-          height={"80%"}
-          className="absolute h-full w-full inset-0 object-cover top-0 -z-10"
-          style={{
-            filter: "brightness(55%)"
-          }}
-        />
+      <main>
+        <Hero />
 
-        <div className="my-auto max-w-screen-xl mx-auto text-balance sm:text-center">
-          <h1 className="text-6xl font-black mb-3">
-            Empower Orphans, Build Futures
-          </h1>
-          <p className="text-xl font-medium opacity-90">
-            Join us in making a difference in the lives of orphaned children
-            around the world.
-          </p>
-
-          <Button
-            className="my-4 md:py-6 font-bold"
-            variant={"brand"}
-            size={"lg"}
-          >
-            DONATE NOW
-          </Button>
-        </div>
-
-        <div className="h-6"></div>
+        {/* cards */}
+        <ServicesCards />
       </main>
-
-      {/* cards */}
-      <ServicesCards />
 
       <section className="max-w-screen-xl mx-auto p-4 mt-12 md:mt-24">
         <div className="bg-gray-100 relative p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-4">

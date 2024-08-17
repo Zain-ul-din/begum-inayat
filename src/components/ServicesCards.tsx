@@ -3,32 +3,40 @@ import { cn } from "@/lib/utils";
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMediaQuery } from "usehooks-ts";
 
 export default function ServicesCards() {
   const [scrollProgress, setScrollProgress] = useState<number>(0);
   const servicesCardsRef = useRef<HTMLDivElement>(null);
 
+  const isMdDevice = useMediaQuery("(max-width: 800px");
+
+  console.log("isMd Device:", isMdDevice);
+
   useLayoutEffect(() => {
+    if (!isMdDevice) return;
     gsap.registerPlugin(ScrollTrigger);
 
     const timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: servicesCardsRef.current,
-        start: "top-=250px",
-        end: "top-=100px",
-        scrub: 1
+        trigger: "main",
+        start: "top+=210px",
+        end: "bottom-=100px",
+        scrub: true,
+        markers: true,
+        pin: true
       },
       onUpdate: function () {
         setScrollProgress(this.totalProgress());
       }
     });
 
-    timeline.to("#services-cards", { x: 0 });
+    timeline.to("main", { x: 0 });
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [isMdDevice]);
 
   useLayoutEffect(() => {
     if (servicesCardsRef.current) {
@@ -43,7 +51,7 @@ export default function ServicesCards() {
     <>
       <div
         ref={servicesCardsRef}
-        className="max-w-[1200px] grid scroll-smooth mx-auto p-2 gap-2  -translate-y-10  snap-x snap-mandatory overflow-x-auto"
+        className="max-w-[1200px] grid mx-auto p-2 gap-2  -translate-y-10 overflow-x-auto"
         style={{
           gridTemplateColumns: "repeat(3, minmax(250px, 1fr))"
         }}
@@ -57,7 +65,7 @@ export default function ServicesCards() {
             <div
               key={i}
               className={cn(
-                "w-full bg-blue-900 text-white p-4 md:p-8 rounded-md snap-center",
+                "w-full bg-blue-900 text-white p-4 md:p-8 rounded-md",
                 i === 0 && "bg-gradient-to-b from-pink-500 to-pink-600",
                 i === 1 && "bg-gradient-to-b from-blue-800 to-blue-900",
                 i === 2 && "bg-gradient-to-b from-cyan-500 to-cyan-600"
