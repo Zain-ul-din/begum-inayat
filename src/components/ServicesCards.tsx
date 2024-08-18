@@ -15,13 +15,27 @@ export default function ServicesCards() {
     if (!isMdDevice) return;
     gsap.registerPlugin(ScrollTrigger);
 
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "main",
+          start: "top+=250px",
+          end: "top+=350px",
+          pin: true,
+          scrub: true,
+          markers: true
+        }
+      })
+      .to("main", { y: 0 });
+
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: "main",
         start: "top+=300px",
         end: "bottom-=100px",
         scrub: true,
-        pin: true
+        pin: true,
+        markers: true
       },
       onUpdate: function () {
         setScrollProgress(this.totalProgress());
@@ -48,7 +62,7 @@ export default function ServicesCards() {
     <>
       <div
         ref={servicesCardsRef}
-        className="max-w-[1200px] grid mx-auto p-2 gap-2  -translate-y-10 overflow-x-auto"
+        className="max-w-[1200px] grid mx-auto p-2 gap-2 pointer-events-none  -translate-y-10 overflow-x-auto"
         style={{
           gridTemplateColumns: "repeat(3, minmax(250px, 1fr))"
         }}
