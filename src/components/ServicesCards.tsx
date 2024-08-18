@@ -22,8 +22,7 @@ export default function ServicesCards() {
           start: "top+=250px",
           end: "top+=350px",
           pin: true,
-          scrub: true,
-          markers: true
+          scrub: true
         }
       })
       .to("main", { y: 0 });
@@ -31,11 +30,10 @@ export default function ServicesCards() {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: "main",
-        start: "top+=300px",
+        start: "top+=350px",
         end: "bottom-=100px",
         scrub: true,
-        pin: true,
-        markers: true
+        pin: true
       },
       onUpdate: function () {
         setScrollProgress(this.totalProgress());
