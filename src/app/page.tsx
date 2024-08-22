@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import CTA from "@/components/cta";
 import Hero from "@/components/hero";
+import { ImagesCarousel } from "@/components/images-carousel";
 import LearnMore from "@/components/learn-more";
 import OurMission from "@/components/our-mission";
 import ServicesCards from "@/components/ServicesCards";
@@ -15,6 +16,13 @@ export default function Home() {
       </main>
       <OurMission />
       <LearnMore />
+      {/* image gallery */}
+      <div className="max-w-screen-xl mx-auto mt-24  relative">
+        <h1 className="to-blue-950 text-4xl font-black mb-6 text-center">
+          Photo Gallery
+        </h1>
+        <ImagesCarousel />
+      </div>
       <CTA />
     </>
   );

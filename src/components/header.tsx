@@ -57,8 +57,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
         >
           <ul className="flex gap-4 items-center max-md:flex-col">
             {[
-              { label: "Home", link: "/" },
-              { label: "Our Mission", link: "/mission" },
+              { label: "Home", link: routes.home },
               { label: "Messages", link: "/messages" },
               { label: "Our Work", link: "/work" }
             ].map((link, i) => {
@@ -79,7 +78,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
             })}
           </ul>
 
-          <Link href={"/"}>
+          <Link href={routes.contact}>
             <Button variant={"brand-outline"} size={"lg"}>
               Contact Us
             </Button>

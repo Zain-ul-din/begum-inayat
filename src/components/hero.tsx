@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 export default function Hero() {
   return (
     <>
-      <section className=" text-white p-4 min-h-[80vh] h-[80vh] flex flex-col relative">
+      <section className="text-white p-4 min-h-[80vh] h-[80vh] flex flex-col relative">
         <img
           data-scroll
           data-scroll-speed="-0.1"
