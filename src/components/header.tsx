@@ -60,7 +60,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           <ul className="flex gap-4 items-center max-md:flex-col">
             {[
               { label: "Home", link: routes.home },
-              { label: "Messages", link: "/messages" },
+              { label: "Messages", link: routes.messages },
               { label: "Our Work", link: "/work" }
             ].map((link, i) => {
               return (
