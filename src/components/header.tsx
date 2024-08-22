@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { forwardRef, HTMLAttributes, useState } from "react";
+import { forwardRef, HTMLAttributes, useEffect, useState } from "react";
 import routes from "../lib/constants/routes";
 import { usePathname, useRouter } from "next/navigation";
 import { IoClose, IoMenu } from "react-icons/io5";
@@ -17,6 +17,8 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => setIsMenuOpen(false), [activePathName]);
 
   return (
     <header {...props} ref={ref} className={cn(props.className)}>
@@ -79,7 +81,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           </ul>
 
           <Link href={routes.contact}>
-            <Button variant={"brand-outline"} size={"lg"}>
+            <Button variant={"brand"} className="font-bold" size={"lg"}>
               Contact Us
             </Button>
           </Link>
