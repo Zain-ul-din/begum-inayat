@@ -3,6 +3,7 @@ import { Oxygen } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import LocoMotiveProvider from "@/providers/locomotive";
+import Header from "@/components/header";
 
 const fontSans = Oxygen({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-oxygen", fontSans.variable)}>
+        <Header />
         <LocoMotiveProvider>{children}</LocoMotiveProvider>
       </body>
     </html>

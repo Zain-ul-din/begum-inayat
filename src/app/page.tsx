@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import Hero from "@/components/hero";
 import ServicesCards from "@/components/ServicesCards";
 import { Button } from "@/components/ui/button";
@@ -6,12 +7,6 @@ import { cn } from "@/lib/utils";
 export default function Home() {
   return (
     <>
-      {/* <header className="">
-        <div className="p-4 max-w-screen-xl mx-auto">
-          <h1 className=""></h1>
-        </div>
-      </header> */}
-
       {/* hero section */}
       <main>
         <Hero />
