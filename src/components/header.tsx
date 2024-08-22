@@ -20,7 +20,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
 
   return (
     <header {...props} ref={ref} className={cn(props.className)}>
-      <div className="p-4  max-w-screen-xl mx-auto flex gap-8">
+      <div className="p-4 py-6  max-w-screen-xl mx-auto flex gap-8">
         <Link href={routes.home}>
           <div className="flex items-center">
             <img
@@ -80,7 +80,9 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           </ul>
 
           <Link href={"/"}>
-            <Button variant={"brand-outline"}>Contact Us</Button>
+            <Button variant={"brand-outline"} size={"lg"}>
+              Contact Us
+            </Button>
           </Link>
         </div>
       </div>

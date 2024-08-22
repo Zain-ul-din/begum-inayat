@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import LocoMotiveProvider from "@/providers/locomotive";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const fontSans = Oxygen({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={cn("font-oxygen", fontSans.variable)}>
         <Header />
         <LocoMotiveProvider>{children}</LocoMotiveProvider>
+        <Footer />
       </body>
     </html>
   );
