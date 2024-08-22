@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import ServicesCards from "@/components/ServicesCards";
@@ -39,12 +40,12 @@ export default function Home() {
 
           {/* Image Section */}
           <div className="relative flex">
-            <div className="md:absolute mx-auto top-0 right-0 md:static md:flex md:justify-end">
+            <div className="md:absolute mx-auto top-0 right-0 md:flex md:justify-end">
               <img
-                src="/images/kids-playing.webp"
-                width={"450"}
+                src="/images/little-kid-pic.jpeg"
+                width={"400"}
                 height={"350"}
-                className="rounded-md md:-translate-y-[30%] w-[100%] sm:w-[75%] md:w-[450px] h-auto"
+                className="rounded-md mx-auto min-[850px]:-translate-y-[30%] w-[100%] sm:w-[75%] md:w-[400px] h-auto"
                 alt="kids playing picture"
               />
             </div>
