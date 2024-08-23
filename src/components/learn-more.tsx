@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
+import routes from "../lib/constants/routes";
 
 export default function LearnMore() {
   return (
@@ -29,9 +31,11 @@ export default function LearnMore() {
               is left behind, and every dream has the chance to flourish.
             </p>
 
-            <Button className="mt-8" variant={"outline"} size={"lg"}>
-              LEARN MORE
-            </Button>
+            <Link href={routes.messages}>
+              <Button className="mt-8" variant={"outline"} size={"lg"}>
+                LEARN MORE
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

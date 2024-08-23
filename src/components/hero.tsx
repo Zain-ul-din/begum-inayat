@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
+import routes from "../lib/constants/routes";
 
 export default function Hero() {
   return (
@@ -25,14 +27,15 @@ export default function Hero() {
             Join us in making a difference in the lives of orphaned children
             around the world.
           </p>
-
-          <Button
-            className="my-4 md:py-6 font-bold"
-            variant={"brand"}
-            size={"lg"}
-          >
-            DONATE NOW
-          </Button>
+          <Link href={routes.donate}>
+            <Button
+              className="my-4 md:py-6 font-bold"
+              variant={"brand"}
+              size={"lg"}
+            >
+              DONATE NOW
+            </Button>
+          </Link>
         </div>
 
         <div className="h-6"></div>

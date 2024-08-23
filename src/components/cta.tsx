@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
+import routes from "../lib/constants/routes";
 
 export default function CTA() {
   return (
@@ -21,16 +23,24 @@ export default function CTA() {
             tomorrows.
           </p>
           <div className="mt-8 flex gap-4 flex-wrap">
-            <Button
-              className="text-white font-bold"
-              variant={"brand"}
-              size={"lg"}
-            >
-              DONATE NOW
-            </Button>
-            <Button className="font-bold" variant={"brand-outline"} size={"lg"}>
-              BE VOLUNTEER
-            </Button>
+            <Link href={routes.donate}>
+              <Button
+                className="text-white font-bold"
+                variant={"brand"}
+                size={"lg"}
+              >
+                DONATE NOW
+              </Button>
+            </Link>
+            <Link href={routes.contact}>
+              <Button
+                className="font-bold"
+                variant={"brand-outline"}
+                size={"lg"}
+              >
+                BE VOLUNTEER
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="flex">
