@@ -61,7 +61,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
             {[
               { label: "Home", link: routes.home },
               { label: "Messages", link: routes.messages },
-              { label: "Our Work", link: "/work" }
+              { label: "Our Work", link: routes.work }
             ].map((link, i) => {
               return (
                 <li
@@ -72,7 +72,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
                   <div
                     className={cn(
                       activePathName !== link.link && "scale-x-0",
-                      "absolute w-full h-[0.15rem] transition-all origin-left duration-100 group-hover:scale-x-100 -bottom-[0.2rem] bg-brand-primary rounded-md"
+                      "absolute w-full h-[0.15rem] transition-all origin-left duration-300 group-hover:scale-x-100 -bottom-[0.2rem] bg-cyan-600 delay-50 rounded-md"
                     )}
                   ></div>
                 </li>
