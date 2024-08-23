@@ -9,9 +9,22 @@ export function ImagesCarousel() {
   ));
 
   return (
-    <div className="w-full h-full">
-      <Carousel items={cards} />
-    </div>
+    <section className="max-w-screen-xl mx-auto mt-32 md:mt-40 relative">
+      <div className="absolute -z-10 -translate-y-full max-sm:-rotate-6 left-1/2 -translate-x-1/2">
+        <img
+          src="/images/art/crown.png"
+          alt="crown art"
+          width={100}
+          height={100}
+        />
+      </div>
+      <h1 className="to-blue-950 text-4xl font-black mb-6 text-center">
+        Photo Gallery
+      </h1>
+      <div className="w-full h-full">
+        <Carousel items={cards} />
+      </div>
+    </section>
   );
 }
 

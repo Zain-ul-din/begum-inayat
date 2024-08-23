@@ -81,7 +81,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     >
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto py-4  scroll-smooth [scrollbar-width:none]"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -155,7 +155,7 @@ export const Card = ({
     <>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[60vw] w-[80vw] md:h-[30vw] md:w-[50vw] md:max-w-[750px] overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[70vw] w-[80vw] md:h-[30vw] md:w-[50vw] md:max-w-[750px] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-transparent via-transparent to-black/60  z-30 pointer-events-none" />
         <div className="relative z-40 p-4 h-full flex">

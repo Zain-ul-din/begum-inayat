@@ -17,12 +17,8 @@ export default function Home() {
       <OurMission />
       <LearnMore />
       {/* image gallery */}
-      <div className="max-w-screen-xl mx-auto mt-24  relative">
-        <h1 className="to-blue-950 text-4xl font-black mb-6 text-center">
-          Photo Gallery
-        </h1>
-        <ImagesCarousel />
-      </div>
+      <ImagesCarousel />
+
       <CTA />
     </>
   );
