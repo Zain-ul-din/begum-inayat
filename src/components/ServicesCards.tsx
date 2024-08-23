@@ -60,7 +60,7 @@ export default function ServicesCards() {
       ease: "none",
       scrollTrigger: {
         trigger: "main",
-        start: "top+=300px",
+        start: "top+=350px",
         pin: true,
         scrub: true,
         snap: 1 / (sections.length - 1),
