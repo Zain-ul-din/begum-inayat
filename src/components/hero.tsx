@@ -15,7 +15,7 @@ export default function Hero() {
           height={"80%"}
           className="absolute h-full w-full inset-0 object-cover top-0 -z-10"
           style={{
-            filter: "brightness(55%)"
+            filter: "brightness(70%)"
           }}
         />
 
