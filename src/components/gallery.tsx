@@ -39,6 +39,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items }) => {
                     src={src}
                     alt="Landscape"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               );
@@ -53,6 +54,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items }) => {
                     src={src}
                     alt="Portrait"
                     className="w-full h-full object-cover object-top"
+                    loading="lazy"
                   />
                 </div>
               );
@@ -67,6 +69,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items }) => {
                     src={src}
                     alt="Full Screen"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               );
