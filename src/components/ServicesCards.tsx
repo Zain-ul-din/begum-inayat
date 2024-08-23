@@ -62,7 +62,7 @@ export default function ServicesCards() {
         trigger: "main",
         start: "top+=300px",
         pin: true,
-        scrub: 1,
+        scrub: true,
         snap: 1 / (sections.length - 1),
         end: () => "+=" + document.querySelector("main")?.offsetWidth
       }
