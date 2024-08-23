@@ -12,7 +12,7 @@ export default function LocoMotiveProvider({
       const locoScroll = new LocomotiveScroll({});
     };
 
-    importLocoMotive();
+    // importLocoMotive();
   }, []);
 
   return <>{children}</>;
