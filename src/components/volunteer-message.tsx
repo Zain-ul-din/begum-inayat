@@ -23,13 +23,13 @@ export default function VolunteerMessage() {
               <Avatar>
                 <AvatarImage
                   src="/images/temp/sample-avatar-pic.jpeg"
-                  alt="Volunteer"
+                  alt="Owner Picture"
                 />
                 <AvatarFallback>JD</AvatarFallback>
               </Avatar>
               <div>
                 <div className="font-medium">Dr Amina</div>
-                <div className="text-sm text-white/80">Volunteer</div>
+                <div className="text-sm text-white/80">Owner</div>
               </div>
             </div>
             <div className="text-sm text-muted-foreground">August 22, 2024</div>
@@ -42,13 +42,13 @@ export default function VolunteerMessage() {
             <Avatar>
               <AvatarImage
                 src="/images/temp/sample-avatar-pic.jpeg"
-                alt="Volunteer"
+                alt="Owner Picture"
               />
               <AvatarFallback>JD</AvatarFallback>
             </Avatar>
             <div>
               <div className="font-medium">Dr Amina</div>
-              <div className="text-sm text-muted-foreground">Volunteer</div>
+              <div className="text-sm text-muted-foreground">Owner</div>
             </div>
           </div>
           <div className="text-sm text-muted-foreground">August 22, 2024</div>
