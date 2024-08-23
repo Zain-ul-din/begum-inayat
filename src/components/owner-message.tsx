@@ -74,7 +74,7 @@ export function OwnerMessage() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-12">
       <Timeline
         data={data}
         title="Dr Amina Amber"
