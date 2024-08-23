@@ -9,7 +9,7 @@ export default function Hero() {
         <img
           // data-scroll
           // data-scroll-speed="0.1"
-          src="/images/children.png"
+          src="/images/temp/pic_2.jpeg"
           alt="orphan children picture"
           width={"100%"}
           height={"80%"}
