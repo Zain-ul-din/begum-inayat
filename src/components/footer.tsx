@@ -16,7 +16,7 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>((props, ref) => {
       <div className="max-w-screen-xl  gap-4 p-6 md:p-12 mx-auto grid grid-cols-2 md:grid-cols-3">
         <div className="max-md:col-span-2">
           <h1 className="text-brand-primary font-bold text-2xl mb-2">
-            Begum Inayat Welfare
+            Begum Inayat Welfare Society
           </h1>
           <p>
             A charitable organization dedicated to orphan care and adoption.
@@ -50,7 +50,7 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>((props, ref) => {
           <div className="max-md:mr-auto">
             <h1 className="text-xl font-bold text-blue-950 mb-2">Contact Us</h1>
             <p className="mb-1 text-gray-500 max-md:text-sm">
-              org.info@gmail.com
+              naeemsiddiqi55@gmail.com
             </p>
             <p className="mb-1 text-gray-500 max-md:text-sm">
               <Link

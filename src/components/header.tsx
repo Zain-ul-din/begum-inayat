@@ -31,8 +31,8 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
               width={50}
               height={50}
             />
-            <h1 className="text-brand-primary font-bold text-xl whitespace-nowrap">
-              Begum Inayat Welfare
+            <h1 className="text-brand-primary font-bold md:text-xl whitespace-nowrap">
+              Begum Inayat Welfare Society
             </h1>
           </div>
         </Link>

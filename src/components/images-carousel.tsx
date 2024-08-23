@@ -9,7 +9,7 @@ export function ImagesCarousel() {
   ));
 
   return (
-    <section className="max-w-screen-xl mx-auto mt-32 md:mt-40 relative">
+    <section className="max-w-screen-xl mx-auto mt-44 relative">
       <div className="absolute -z-10 -translate-y-full max-sm:-rotate-3 left-1/2 -translate-x-1/2">
         <img
           src="/images/art/crown.png"
