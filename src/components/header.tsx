@@ -51,7 +51,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
 
         <div
           className={cn(
-            "flex z-10 bg-white ml-auto gap-4 items-center max-md:fixed inset-0 max-md:w-full max-md:h-full max-md:flex-col",
+            "flex z-[999] bg-white ml-auto gap-4 items-center max-md:fixed inset-0 max-md:w-full max-md:h-full max-md:flex-col",
             "max-md:justify-center max-md:items-center max-md:text-xl",
             isMenuOpen ? "translate-x-0" : "md:translate-x-0 translate-x-full",
             "transition-transform transform"
