@@ -62,8 +62,8 @@ export default function ServicesCards() {
         trigger: "main",
         start: "top+=350px",
         pin: true,
-        scrub: true,
-        snap: 1 / (sections.length - 1),
+        scrub: 1,
+        // snap: 1 / (sections.length - 1),
         end: () => "+=" + document.querySelector("main")?.offsetWidth
       }
     });
