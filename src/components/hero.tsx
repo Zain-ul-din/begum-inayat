@@ -5,8 +5,8 @@ export default function Hero() {
     <>
       <section className="text-white p-4 min-h-[80vh] h-[80vh] flex flex-col relative">
         <img
-          data-scroll
-          data-scroll-speed="-0.1"
+          // data-scroll
+          // data-scroll-speed="0.1"
           src="/images/children.png"
           alt="orphan children picture"
           width={"100%"}
