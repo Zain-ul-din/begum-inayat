@@ -14,9 +14,9 @@ export default function LearnMore() {
         <div className="flex flex-col justify-evenly">
           <img
             src="/images/art/cute-doodle.png"
-            className="right-[30%] bottom-[20%] lg:w-[300px] mb-4"
-            width={200}
-            height={200}
+            className="right-[30%] bottom-[20%] lg:w-[220px] mb-4"
+            width={150}
+            height={150}
           />
           <div>
             {/* <h2 className="font-bold text-white text-sm my-1">HOUSE</h2> */}
