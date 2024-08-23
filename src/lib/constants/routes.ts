@@ -4,7 +4,12 @@ const routes = {
   mission: "/#our-mission",
   messages: "/messages",
   work: "/work",
-  donate: "/donate"
+  donate: "/donate",
+  services: {
+    health: "/services/health",
+    emotions: "/services/emotions",
+    education: "/services/education"
+  }
 };
 
 export default routes;

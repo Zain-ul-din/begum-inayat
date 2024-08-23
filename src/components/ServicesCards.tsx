@@ -4,6 +4,8 @@ import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "usehooks-ts";
+import routes from "@/lib/constants/routes";
+import Link from "next/link";
 
 const services = [
   {
@@ -11,21 +13,24 @@ const services = [
     title: "Empowering Education",
     description:
       "Your generosity ensures that every child under our care has access to quality education. By unlocking the doors to learning, we break the cycle of poverty and open up a world of opportunities for these children.",
-    gradient: "bg-gradient-to-b from-pink-500 to-pink-600"
+    gradient: "bg-gradient-to-b from-pink-500 to-pink-600",
+    link: routes.services.education
   },
   {
     imgSrc: "/images/graduation-cap.svg",
     title: "Health and Well-being",
     description:
       "With your help, we provide essential healthcare services and nutritious meals, creating a safe and nurturing environment where children can thrive both physically and mentally.",
-    gradient: "bg-gradient-to-b from-blue-800 to-blue-900"
+    gradient: "bg-gradient-to-b from-blue-800 to-blue-900",
+    link: routes.services.health
   },
   {
     imgSrc: "/images/love.svg",
     title: "Emotional Support",
     description:
       "Your donation enables us to offer counseling services and emotional support, helping children heal from trauma and build resilience.",
-    gradient: "bg-gradient-to-b from-cyan-500 to-cyan-600"
+    gradient: "bg-gradient-to-b from-cyan-500 to-cyan-600",
+    link: routes.services.emotions
   }
 ];
 
@@ -77,7 +82,7 @@ export default function ServicesCards() {
     <>
       <div
         ref={servicesCardParentRef}
-        className="max-w-[1200px] grid mx-auto p-2 gap-2 pointer-events-none -translate-y-10 overflow-hidden"
+        className="max-w-[1200px] grid mx-auto p-2 gap-2  -translate-y-10 overflow-hidden"
         style={{
           gridTemplateColumns: "repeat(3, minmax(250px, 1fr))"
         }}
@@ -91,13 +96,15 @@ export default function ServicesCards() {
             )}
             data-horizontal-scroll
           >
-            <img
-              src={item.imgSrc}
-              alt={`${item.title} icon`}
-              width={"60"}
-              height={"60"}
-            />
-            <h1 className="font-bold text-2xl my-4">{item.title}</h1>
+            <Link href={item.link}>
+              <img
+                src={item.imgSrc}
+                alt={`${item.title} icon`}
+                width={"60"}
+                height={"60"}
+              />
+              <h1 className="font-bold text-2xl my-4">{item.title}</h1>
+            </Link>
             <p className="text-sm mb-2">{item.description}</p>
           </div>
         ))}
