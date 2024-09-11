@@ -6,7 +6,7 @@ const IBN = "PK94FAYS0130006000000316";
 
 export default function DonationDetails() {
   return (
-    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto p-4 md:p-8">
+    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto p-4 md:p-8 blur-sm pointer-events-none">
       <div className="relative rounded-lg overflow-hidden">
         <img
           src="\images\holding-hands.png"
