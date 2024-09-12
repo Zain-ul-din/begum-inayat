@@ -5,6 +5,7 @@ const routes = {
   messages: "/messages",
   work: "/work",
   donate: "/donate",
+  sponsor: "/sponsor",
   services: {
     health: "/services/health",
     emotions: "/services/emotions",

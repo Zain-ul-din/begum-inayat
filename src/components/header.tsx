@@ -6,6 +6,8 @@ import routes from "../lib/constants/routes";
 import { usePathname, useRouter } from "next/navigation";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Button } from "./ui/button";
+import { Label } from "@radix-ui/react-label";
+import { link } from "fs";
 
 interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -38,7 +40,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
         </Link>
 
         <button
-          className="md:hidden z-[999] ml-auto"
+          className="lg:hidden z-[999] ml-auto"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -51,15 +53,16 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
 
         <div
           className={cn(
-            "flex z-[998] bg-white ml-auto gap-4 items-center max-md:fixed inset-0 max-md:w-full max-md:h-full max-md:flex-col",
-            "max-md:justify-center max-md:items-center max-md:text-xl",
-            isMenuOpen ? "translate-x-0" : "md:translate-x-0 translate-x-full",
+            "flex z-[998] bg-white ml-auto gap-4 items-center max-lg:fixed inset-0 max-lg:w-full max-lg:h-full max-lg:flex-col",
+            "max-lg:justify-center max-lg:items-center max-lg:text-xl",
+            isMenuOpen ? "translate-x-0" : "lg:translate-x-0 translate-x-full",
             "transition-transform transform"
           )}
         >
           <ul className="flex gap-4 items-center max-md:flex-col">
             {[
               { label: "Home", link: routes.home },
+              { label: "Sponsor", link: routes.sponsor },
               { label: "Messages", link: routes.messages },
               { label: "Our Work", link: routes.work }
             ].map((link, i) => {
