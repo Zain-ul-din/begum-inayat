@@ -25,8 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-oxygen", fontSans.variable)}>
-        <main className="w-full h-full min-h-screen bg-yellow-800/30 pointer-events-none z-[9999] fixed"></main>
-        <div className="w-full h-[15vh] flex justify-center items-center bg-yellow-500 sticky top-0 z-[9999]">
+        {/* <main className="w-full h-full min-h-screen bg-yellow-800/30 pointer-events-none z-[9999] fixed"></main> */}
+        {/* <div className="w-full h-[15vh] flex justify-center items-center bg-yellow-500 sticky top-0 z-[9999]">
           <p className="text-xl font-bold p-4 text-center">
             <strong>Notice:</strong> This website is the intellectual property
             of{" "}
@@ -39,7 +39,7 @@ export default function RootLayout({
             . Full ownership will be transferred to Begum Inayat Welfare Society
             upon receipt of the remaining payment.
           </p>
-        </div>
+        </div> */}
         <Header />
         <LocoMotiveProvider>{children}</LocoMotiveProvider>
         <Footer />
