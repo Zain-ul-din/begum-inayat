@@ -3,15 +3,21 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
+import { MessageType } from "@/types/messages-query";
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 
-export default function VolunteerMessage() {
+export default function VolunteerMessage({
+  message
+}: {
+  message: MessageType;
+}) {
   const [showMore, setShowMore] = useState(false);
 
   return (
     <Card className="w-full max-w-3xl relative">
       <div className="relative">
         <img
-          src="/images/temp/pic_1.jpeg"
+          src={message.picture.url}
           alt="Volunteer Message"
           width="600"
           height="300"
@@ -22,17 +28,19 @@ export default function VolunteerMessage() {
             <div className="flex items-center gap-2">
               <Avatar>
                 <AvatarImage
-                  src="/images/temp/sample-avatar-pic.jpeg"
-                  alt="Owner Picture"
+                  src={message.picture.url}
+                  alt={`${message.author} Picture`}
                 />
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarFallback>{message.role}</AvatarFallback>
               </Avatar>
               <div>
-                <div className="font-medium">Dr Amina</div>
-                <div className="text-sm text-white/80">Owner</div>
+                <div className="font-medium">{message.author}</div>
+                <div className="text-sm text-white/80">{message.role}</div>
               </div>
             </div>
-            <div className="text-sm text-muted-foreground">August 22, 2024</div>
+            <div className="text-sm text-muted-foreground">
+              {new Date(message.postedAt).toDateString()}
+            </div>
           </div>
         </div>
       </div>
@@ -41,17 +49,21 @@ export default function VolunteerMessage() {
           <div className="flex items-center gap-2">
             <Avatar>
               <AvatarImage
-                src="/images/temp/sample-avatar-pic.jpeg"
-                alt="Owner Picture"
+                src={message.picture.url}
+                alt={`${message.author} Picture`}
               />
-              <AvatarFallback>JD</AvatarFallback>
+              <AvatarFallback>{message.role}</AvatarFallback>
             </Avatar>
             <div>
-              <div className="font-medium">Dr Amina</div>
-              <div className="text-sm text-muted-foreground">Owner</div>
+              <div className="font-medium">{message.author}</div>
+              <div className="text-sm text-muted-foreground">
+                {message.role}
+              </div>
             </div>
           </div>
-          <div className="text-sm text-muted-foreground">August 22, 2024</div>
+          <div className="text-sm text-muted-foreground">
+            {new Date(message.postedAt).toDateString()}
+          </div>
         </div>
       </div>
       <div
@@ -59,40 +71,7 @@ export default function VolunteerMessage() {
           showMore ? "" : "max-h-96 overflow-hidden"
         }`}
       >
-        <p>My Journey from Being an Orphan to Building an Orphanage</p>
-
-        <p>
-          My journey began in an orphanage, where I spent most of my life.
-          Growing up without parents was challenging, but the orphanage became
-          my home, my shelter, and the place where I learned valuable lessons
-          about life. The caregivers did their best to provide us with food,
-          education, and emotional support, despite limited resources.
-        </p>
-
-        <p>
-          Despite the difficulties, I was determined to make something of my
-          life. I knew that education would be the key to a better future, so I
-          focused diligently on my studies. After years of persistence and
-          dedication, I completed my degree—an achievement that once seemed
-          almost impossible given my circumstances.
-        </p>
-
-        {/* More content... */}
-        <p>
-          This orphanage is more than just a place—it’s a symbol of hope. It
-          stands as a reminder that no matter where you come from or what
-          circumstances you face, you can rise above them and create a better
-          future. My journey has come full circle: from being a child in an
-          orphanage to now providing the same love and support to other children
-          that was once given to me.
-        </p>
-
-        <p>
-          This is not just my story; it’s the story of every child who has found
-          hope and a future within these walls. Alhamdulillah, our work
-          continues, and with God’s help, we will keep growing, giving more
-          children the chance to chase their dreams.
-        </p>
+        {documentToPlainTextString(message.message.json)}
       </div>
       <div className={cn("px-4 isolate  py-4 md:px-6 lg:py-6 relative")}>
         {!showMore && (
