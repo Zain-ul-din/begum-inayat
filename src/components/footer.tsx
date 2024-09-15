@@ -10,11 +10,7 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>((props, ref) => {
   return (
     <footer
       {...props}
-      className={cn(
-        "mt-24 bg-gray-100",
-        "blur-[3px] pointer-events-none",
-        props.className
-      )}
+      className={cn("mt-24 bg-gray-100", props.className)}
       ref={ref}
     >
       <div className="max-w-screen-xl  gap-4 p-6 md:p-12 mx-auto grid grid-cols-2 md:grid-cols-3">

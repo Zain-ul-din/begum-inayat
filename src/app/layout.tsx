@@ -25,21 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-oxygen", fontSans.variable)}>
-        <main className="w-full h-full top-0 inset-0 min-h-screen bg-red-800/50 pointer-events-none z-[9999] fixed"></main>
-        <div className="w-full py-12 flex justify-center items-center bg-red-700 text-white sticky top-0 z-[9999]">
-          <p className="text-xl font-bold p-4 text-center">
-            <strong>Notice:</strong> This website is the intellectual property
-            of{" "}
-            <a
-              href="https://github.com/Zain-ul-din"
-              className="underline underline-offset-2"
-            >
-              Zain ul din
-            </a>
-            . Full ownership will be transferred to Begum Inayat Welfare Society
-            upon receipt of the remaining payment.
-          </p>
-        </div>
+        
         <Header />
         <LocoMotiveProvider>{children}</LocoMotiveProvider>
         <Footer />
