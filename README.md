@@ -40,3 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## CMS
 
 apollo client url: [https://graphql.contentful.com/content/v1/spaces/{SPACE_ID}/explore?access_token={CDA_ACCESS_TOKEN}](https://graphql.contentful.com/content/v1/spaces/{SPACE_ID}/explore?access_token={CDA_ACCESS_TOKEN})
+
+## Useful links crafted while developing
+
+- [remove env file from git forever](https://gist.github.com/gjerokrsteski/e4a10352448158ba827493eb116cda51)
