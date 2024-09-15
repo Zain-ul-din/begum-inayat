@@ -6,8 +6,39 @@ import LearnMore from "@/components/learn-more";
 import OurMission from "@/components/our-mission";
 import { OwnerMessage } from "@/components/owner-message";
 import ServicesCards from "@/components/ServicesCards";
+import { gqlEndPoint, gqlHeaders } from "@/lib/gql-client";
+import CarouselQueryRes from "@/types/carousel-query";
 
-export default function Home() {
+const query = `
+query GetCarousel {
+  carouselCollection(order: postedAt_DESC) {
+    items{
+      _id
+      image{
+        url
+      }
+      description
+      postedAt
+    }
+  }
+}
+`;
+
+export default async function Home() {
+  const res = await fetch(gqlEndPoint, {
+    method: "POST",
+    body: JSON.stringify({
+      query
+    }),
+    headers: {
+      ...gqlHeaders,
+      "Content-Type": "application/json"
+    },
+    next: { revalidate: 60 }
+  });
+
+  const carouselImages = (await res.json()) as CarouselQueryRes;
+
   return (
     <>
       {/* hero section */}
@@ -19,7 +50,14 @@ export default function Home() {
       <OwnerMessage />
       <LearnMore />
       {/* image gallery */}
-      <ImagesCarousel />
+      <ImagesCarousel
+        data={carouselImages.data.carouselCollection.items.map((img) => {
+          return {
+            title: img.description,
+            src: img.image.url
+          };
+        })}
+      />
 
       <CTA />
     </>
