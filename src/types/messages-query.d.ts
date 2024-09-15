@@ -1,7 +1,7 @@
 export default interface MessagesQueryRes {
   data: {
     messagesCollection: {
-      items: [];
+      items: MessageType[];
     };
   };
 }
